@@ -1,0 +1,149 @@
+@import "_var";
+
+.slide-swiper {
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000;
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-slider {
+    width: 290.75px !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 15px !important;
+    padding: 8px 12px;
+    background: #ededed;
+    border-radius: 100px;
+    color: $them-black-color;
+  }
+
+  .slidercard-text {
+    font-family: "Lobster", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 7px;
+  }
+
+  .lowest-lable {
+    background-color: $theme-color;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    font-family: Jost;
+    font-size: 12px;
+    font-weight: 500px;
+    color: white;
+    padding: 10px;
+  }
+
+  .best-saree-maincard {
+    width: 17rem;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 4px 4px 0px 0px;
+    padding: 7px 7px 5px 7px;
+    margin: 4px;
+    font-family: "Lobster, sans-serif ";
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  .lowest-lable {
+    background-color: #da212b;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100px;
+    position: absolute;
+    right: 17px !important;
+    top: 15px !important;
+    font-family: Jost;
+    font-size: 6px !important;
+    font-weight: 500px;
+    color: white !important;
+    padding: 8px !important;
+  }
+
+  .slidercard-text {
+    font-size: 14px !important;
+  }
+
+  .best-saree-maincard {
+    width: 22rem !important;
+    height: 100% !important;
+    border-radius: 20px !important;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    margin: 4px;
+    font-family: "Lobster", sans-serif;
+    position: relative;
+  }
+  .seller-card-img {
+    border-radius: 20px !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .nav-container {
+    max-width: 1660px !important;
+  }
+
+  .best-saree-maincard {
+    width: 22rem !important;
+    height: auto;
+    border-radius: 45px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    padding: 7px;
+    margin: 10px;
+    font-family: "Lobster", sans-serif;
+    position: relative;
+  }
+
+  .heder-logo {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .midium-link {
+    font-size: 25px !important;
+  }
+
+  .category-links {
+    font-size: 14px !important;
+  }
+
+  .sub-category-img {
+    height: 370px !important;
+  }
+}
+
+.home-sellerbgimage {
+  .swiper-button-prev {
+    left: 0px !important;
+  }
+
+  .swiper-button-next {
+    right: -2px !important;
+  }
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}

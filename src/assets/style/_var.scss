@@ -1,0 +1,76 @@
+$theme-color: #da212b;
+$secondary-theme-color: #f5f5f5;
+$theme-shadow: 3px 3px 0px 0px;
+$them-black-color: black;
+
+.them-color {
+  background-color: $theme-color;
+}
+.text-color {
+  color: $theme-color;
+}
+.bg-white-color {
+  background-color: $secondary-theme-color;
+}
+.textwhite-color {
+  color: $secondary-theme-color;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-15 {
+  font-size: 15px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.theme-shadow {
+  box-shadow: 3px 3px 0px 0px;
+}
+
+.bottam-link {
+  background: #f3f3f3;
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 30px;
+  margin-top: 5px;
+}
+.them-borderradius {
+  border-radius: 20px;
+}
+
+.them-font {
+  font-family: Jost;
+}
+
+.them-bg {
+  background-color: #da212b;
+}
+.them-border {
+  border: 2px solid $them-black-color;
+}
+.them-font-color {
+  color: #da212b;
+}
+.graybackgroundcolor {
+  background-color: #f9f9f9;
+}
+.card-radius {
+  border-radius: 17px 17px 0 0;
+}
+
+@media (max-width: 768px) {
+  .fs-13 {
+    font-size: 13px;
+  }
+  .main-modal-font {
+    font-size: 10px !important;
+  }
+}
+
+.enquireform-padding {
+  padding: 10px;
+}

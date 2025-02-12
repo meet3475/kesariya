@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: scroll; */
+}
+
+body{
+    font-family: "Jost";
+}
+.accordionhover:hover{
+    background-color: #dfa3a642!important;
+}
+
+.ytp-cued-thumbnail-overlay-image{
+    -webkit-background-size: contain !important;
+}
+
+/* Center the pagination controls in blog page*/
+.pagination-controls {
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  max-width: 100%; /* Ensure it fits within the container */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Default buttons */
+.MuiPaginationItem-root {
+    background-color: black;
+    color: white;
+  }
+  
+  .MuiPaginationItem-root:hover {
+    background-color: #333;
+  }
+  
+  /* Active button */
+  .Mui-selected {
+    background-color: red !important;
+    color: white !important;
+  }
+  
+  .Mui-selected:hover {
+    background-color: darkred !important;
+  }
+  
+
+
+

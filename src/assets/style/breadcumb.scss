@@ -1,0 +1,46 @@
+.breadcrumb-wrapper {
+  position: absolute;
+  z-index: 1;
+  padding: 10px 10px 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 630px) {
+  .breadcrumb-wrapper {
+    position: absolute;
+    margin-top: -17px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .breadcrumb-wrapper .breadcrumb {
+    font-size: 12px;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: $them-black-color;
+  content: "\002F";
+  font-family: bootstrap-icons !important;
+  font-size: 0.75rem;
+  position: relative;
+  top: 3px;
+  float: left;
+  padding-right: 0.5rem;
+}
+
+.breadcrumb-wrapper .breadcrumb .breadcrumb-item {
+  font-weight: 500;
+  line-height: 1;
+}
+
+.breadcrumb-wrapper .breadcrumb .breadcrumb-item.active {
+  color: $theme-color;
+}
+
+.breadcrumb-item .link-1 {
+  color: $them-black-color;
+  text-decoration: none;
+}

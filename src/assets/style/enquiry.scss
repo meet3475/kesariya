@@ -1,0 +1,143 @@
+.enquire-bg {
+  background-image: url("../images/sellerbgimage.webp");
+  margin-top: 10px;
+
+  .all-border {
+    border: 1px solid black;
+  }
+
+  .radio-shadow {
+    box-shadow: 2px 2px 0 0;
+  }
+
+  .enquire-container {
+    padding: 20px;
+
+    .enquire-form {
+      padding: 20px;
+
+      h2 {
+        margin-bottom: 15px;
+      }
+
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+
+        .form-check {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          .form-check-input {
+            margin: 0;
+            border: 1px solid black;
+          }
+
+          .form-check-label {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    }
+
+    .enquire-image {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 150px 0 150px 0;
+        border: 1px solid black;
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+      }
+
+      .red-img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: $theme-color;
+        border-radius: 0 40px 40px 40px;
+        right: 60px;
+        bottom: 200px;
+      }
+
+      .call-icon {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        font-size: 50px;
+        color: #000;
+        animation: ringing 1s infinite;
+      }
+
+      @keyframes ringing {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        10% {
+          transform: rotate(10deg);
+        }
+
+        20% {
+          transform: rotate(-10deg);
+        }
+
+        30% {
+          transform: rotate(10deg);
+        }
+
+        40% {
+          transform: rotate(-10deg);
+        }
+
+        50% {
+          transform: rotate(5deg);
+        }
+
+        60% {
+          transform: rotate(-5deg);
+        }
+
+        70% {
+          transform: rotate(2deg);
+        }
+
+        80% {
+          transform: rotate(-2deg);
+        }
+
+        90% {
+          transform: rotate(1deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .red-img {
+        right: 32px;
+        bottom: 127px;
+      }
+    }
+  }
+}
+
+.form-check-input:checked {
+  background-color: $theme-color;
+  border-color: $theme-color;
+  padding: 8px;
+}
