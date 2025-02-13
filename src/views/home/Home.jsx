@@ -50,7 +50,7 @@ export const Homepage = () => {
   const [countries, setCountries] = useState([]);
   const [seoData, setSeoData] = useState([]);
   // const [loading, setLoading] = useState(true);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Full name is required"),
@@ -63,7 +63,7 @@ export const Homepage = () => {
   });
 
   const fetchData = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
       const response = await axios.post(HOME_API);
       // console.log("homeapi:", response.data);
@@ -83,10 +83,10 @@ export const Homepage = () => {
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-    }  finally {
+    } finally {
       setTimeout(() => {
         setLoading(false);
-    }, 1000);
+      }, 1000);
     }
   };
 
@@ -119,24 +119,25 @@ export const Homepage = () => {
     fetchSEOData();
   }, []);
 
-
   const location = useLocation();
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
+    // const hasVisited = localStorage.getItem("hasVisited");
+    const hasVisited = sessionStorage.getItem("hasVisited");
 
     if (!hasVisited) {
       if (location.pathname !== "/") {
         navigate("/", { replace: true });
       } else {
         setShowModal(true);
-        localStorage.setItem("hasVisited", "true");
+        // localStorage.setItem("hasVisited", "true");
+        sessionStorage.setItem("hasVisited", "true");
       }
-    } else if (location.pathname === "/") {
-      setShowModal(true);
     }
+    // else if (location.pathname === "/") {
+    //   setShowModal(true);
+    // }
   }, [location, navigate]);
 
   const handleClose = () => setShowModal(false);
@@ -160,7 +161,6 @@ export const Homepage = () => {
     setIsModalOpen(false);
   };
 
- 
   return (
     <>
       {loading ? (
@@ -176,7 +176,9 @@ export const Homepage = () => {
             </title>
             <link
               rel="canonical"
-              href= {`${window.location.hostname == "localhost" ? "http" : "https"}://${window.location.host}`}
+              href={`${
+                window.location.hostname == "localhost" ? "http" : "https"
+              }://${window.location.host}`}
             />
             <meta property="og:locale" content="en_US" />
             <meta
@@ -227,7 +229,9 @@ export const Homepage = () => {
             />
             <meta
               property="og:url"
-              content = {`${window.location.hostname == "localhost" ? "http" : "https"}://${window.location.host}`}
+              content={`${
+                window.location.hostname == "localhost" ? "http" : "https"
+              }://${window.location.host}`}
             />
             <meta
               property="og:site_name"
@@ -365,6 +369,7 @@ export const Homepage = () => {
           <OurShippingPartner shippingPartnerData={shippingPartnerData} />
           <ReachUs />
           <Companyinfo />
+
           {/* Enquiry Modal ...........................................................................................*/}
           <Modal
             show={showModal}
@@ -387,6 +392,7 @@ export const Homepage = () => {
                 </span>
               </Modal.Title>
             </Modal.Header>
+            <Modal.Body>
             <Row>
               <Col>
                 <div className="px-1 py-2">
@@ -612,7 +618,9 @@ export const Homepage = () => {
                 </div>
               </Col>
             </Row>
+            </Modal.Body>
           </Modal>
+
           <Modal show={showSuccessModal} onHide={handleSuccessClose} centered>
             <Modal.Header closebutton>
               <Modal.Title>Success</Modal.Title>

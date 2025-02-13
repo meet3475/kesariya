@@ -114,7 +114,7 @@ export const BestSellerSareeSlider = ({ data }) => {
                             className="main"
                           >
                             <div className="download-icon">
-                              <GrDownload style={{marginTop :"10px", marginLeft:"2px"}} />
+                              <GrDownload style={{marginTop :"5px", marginLeft:"1px", marginBottom: "-4px"}} />
                             </div>
                           </a>
                         </div>

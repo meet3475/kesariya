@@ -20,6 +20,7 @@ import { FaYoutube, FaFacebook, FaPinterest } from "react-icons/fa";
 import { saveAs } from "file-saver";
 import { RiTwitterXFill } from "react-icons/ri";
 import { ImMail3 } from "react-icons/im";
+import { Tooltip } from "react-tooltip";
 export const Footer = () => {
   const images = [
     image1,
@@ -59,7 +60,7 @@ export const Footer = () => {
                   className="img-fluid"
                 />
               </a>
-              <p style={{ textAlign: "justify", fontSize:"15px"}}>
+              <p style={{ textAlign: "justify", fontSize: "15px" }}>
                 In the name of Kesaria Textile Company 'Kesar' represents the
                 Tradition of India, The journey of Kesaria Textile Company began
                 in the year 1977 with the opening of our wholesale saree market
@@ -181,40 +182,53 @@ export const Footer = () => {
                     <FaYoutube
                       className="text-danger icon-hover"
                       style={{ fontSize: "20px" }}
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="YouTube"
                     />
                   </Link>
                   <Link to="https://x.com/KesariaTextile">
                     <RiTwitterXFill
                       className="icon-hover text-dark"
                       style={{ fontSize: "20px" }}
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="Twitter"
                     />
                   </Link>
                   <Link to="https://www.facebook.com/kesariatextileco/">
                     <FaFacebook
                       style={{ color: "#1773ea", fontSize: "20px" }}
                       className="icon-hover"
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="Facebook"
                     />
                   </Link>
                   <Link to="https://in.pinterest.com/KesariaTextileCo/">
                     <FaPinterest
                       style={{ color: "#e60023", fontSize: "20px" }}
                       className="icon-hover"
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="Pinterest"
                     />
                   </Link>
                   <Link to="">
                     <ImMail3
                       style={{ color: "#1c93f6", fontSize: "19px" }}
                       className="icon-hover"
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="Email"
                     />
                   </Link>
                   <Link to="https://www.instagram.com/kesariatextileco/">
                     <RiInstagramLine
                       className="gradient-icon icon-hover"
                       style={{ color: ":#405DE6", fontSize: "20px" }}
+                      data-tooltip-id="social-tooltip"
+                      data-tooltip-content="Instagram"
                     />
                   </Link>
                 </div>
               </div>
+              <Tooltip id="social-tooltip" place="bottom" effect="solid" />
             </div>
             <div className="col-lg-2 col-md-6 col-sm-12 my-3 d-flex flex-column align-items-center googleplay">
               <img src={googleplay} alt="Google Play" className="img-fluid" />

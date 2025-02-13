@@ -230,6 +230,13 @@ export const Faq = () => {
                         <div
                           className="p-3 fs-6 them-font"
                           id={`example-collapse-text-${index}`}
+                          style={{
+                            maxHeight: openIndex === index ? "500px" : "0px",
+                            overflow: "hidden",
+                            transition:
+                              "max-height 0s ease-in-out, padding 0.4s ease-in-out",
+                            padding: openIndex === index ? "12px" : "0px",
+                          }}
                         >
                           {item.answer}
                         </div>

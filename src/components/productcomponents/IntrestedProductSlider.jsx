@@ -68,7 +68,7 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
                             className="main"
                           >
                             <div className="download-icon">
-                              <GrDownload />
+                              <GrDownload style={{marginTop :"9px"}} />
                             </div>
                           </a>
                         </div>

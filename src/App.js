@@ -77,13 +77,15 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
+    // const hasVisited = localStorage.getItem("hasVisited");
+    const hasVisited = sessionStorage.getItem("hasVisited");
     if (!hasVisited) {
       if (location.pathname !== "/") {
         navigate("/", { replace: true });
       } else {
         setShowModal(true);
-        localStorage.setItem("hasVisited", "true");
+        // localStorage.setItem("hasVisited", "true");
+        sessionStorage.setItem("hasVisited", "true");
       }
     } else if (location.pathname === "/") {
       setShowModal(true);

@@ -1,4 +1,4 @@
-@import 'mixins';
+@import "_mixins";
 
 .top-header-container {
   background-color: black;
@@ -113,7 +113,7 @@
   }
 
   //
-  
+
   .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: -2px !important;
@@ -226,7 +226,7 @@
 
   .wave-container::before,
   .wave-container::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -9%;
     left: -16%;
@@ -288,7 +288,7 @@
     background-color: white;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 100%;
       aspect-ratio: 10/1;
@@ -440,6 +440,15 @@
   height: 60px;
   border-radius: 8px;
 }
+
+.not-found {
+  font-size: 20px;
+  color: rgb(67 67 67);
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px #a7a7a7 inset;
+}
+
 @media (max-width: 576px) {
   .searchtitle {
     font-size: 10px;

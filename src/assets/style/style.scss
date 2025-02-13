@@ -1,3 +1,5 @@
+@import "_mixins";
+@import "_var";
 @import "footer";
 @import "homeslider";
 @import "bottomheder";
@@ -9,8 +11,7 @@
 @import "enquiry";
 @import "call";
 @import "loader";
-@import "mixins";
-@import "_var";
+
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   transform: scale(0.66) !important;
@@ -631,6 +632,8 @@
   cursor: pointer;
   color: white;
   overflow: hidden !important;
+  padding: 10px 20px;
+  border-radius: 5px;
 
   span {
     position: relative;
@@ -958,4 +961,8 @@ body {
   border-radius: 0 0 10px 10px;
   background-color: #fff;
   margin-left: 3px;
+}
+
+.react-tooltip {
+  z-index: 9999;
 }

@@ -10,6 +10,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { GoogleTranslate } from "./Translate";
+import { Tooltip } from "react-tooltip";
 
 export const TopHeader = () => {
   return (
@@ -50,37 +51,59 @@ export const TopHeader = () => {
                   to={"http://www.youtube.com/@KesariaTextileCompany"}
                   target={"_blanck"}
                 >
-                  <CiYoutube />
+                  <CiYoutube
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="YouTube"
+                  />
                 </Link>
                 <Link to={"https://x.com/KesariaTextile"} target={"_blanck"}>
-                  <FaXTwitter />
+                  <FaXTwitter
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="Twitter"
+                  />
                 </Link>
                 <Link
                   to={"https://www.facebook.com/kesariatextileco/"}
                   target={"_blanck"}
                 >
-                  <CiFacebook className="fs-4" />
+                  <CiFacebook
+                    className="fs-4"
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="Facebook"
+                  />
                 </Link>
                 <Link
                   to={"https://in.pinterest.com/KesariaTextileCo/"}
                   target={"_blanck"}
                 >
-                  <ImPinterest2 />
+                  <ImPinterest2
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="Pinterest"
+                  />
                 </Link>
                 <Link
                   to={"https://www.instagram.com/kesariatextileco/"}
                   target={"_blanck"}
                 >
-                  <FaInstagram />
+                  <FaInstagram
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="Instagram"
+                  />
                 </Link>
                 <Link to={"/#"}>
-                  <MdOutlineMail className="fs-4" />
+                  <MdOutlineMail
+                    className="fs-4"
+                    data-tooltip-id="social-tooltiph"
+                    data-tooltip-content="Email"
+                    
+                  />
                 </Link>
               </div>
               <Dropdown className="d-none d-lg-block ">
                 <GoogleTranslate />
               </Dropdown>
             </div>
+            <Tooltip id="social-tooltiph" place="bottom" effect="solid" />
           </div>
         </Container>
       </div>

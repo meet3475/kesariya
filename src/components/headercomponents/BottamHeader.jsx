@@ -71,6 +71,7 @@ export const BottamHeader = () => {
   const handleMouseLeave = () => {
     setOpenCategory(null);
   };
+
   const fetchheaderData = async () => {
     try {
       const response = await axios.post(HEADER_API);
@@ -97,6 +98,7 @@ export const BottamHeader = () => {
       console.error("Error fetching data:", error);
     }
   };
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -126,11 +128,13 @@ export const BottamHeader = () => {
       console.error("Error fetching search results:", error);
     }
   };
+
   const handleClearInput = () => {
     setSearchQuery("");
     setSearchRelatedProducts([]);
     setDropdownVisible(false);
   };
+
   const handleInputChange = async (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -147,6 +151,7 @@ export const BottamHeader = () => {
       setSearchRelatedProducts([]);
     }
   };
+  
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setDropdownVisible(false);
@@ -566,7 +571,7 @@ export const BottamHeader = () => {
                         />
                       )}
                     </div>
-                    <div
+                    {/* <div
                       className="d-flex flex-column gap-2"
                       style={{
                         maxHeight: "400px",
@@ -616,6 +621,67 @@ export const BottamHeader = () => {
                             </div>
                           </div>
                         ))}
+                    </div> */}
+                    <div
+                      className="d-flex flex-column gap-2"
+                      style={{
+                        maxHeight: "400px",
+                        overflowY: "auto",
+                        scrollbarWidth: "none",
+                      }}
+                    >
+                      {searchQuery.trim() !== "" ? ( // Only show results if user has searched
+                        searchRelatedProducts.length > 0 ? (
+                          searchRelatedProducts.map((product) => (
+                            <div
+                              key={product.id}
+                              className="search-related-product p-2 pe-lg-4 pe-1 d-flex align-items-center justify-content-between"
+                              onClick={() => {
+                                navigate(
+                                  `${
+                                    storageData?.locationReplace?.length > 0
+                                      ? "/" + storageData?.locationReplace
+                                      : ""
+                                  }/categories-detail/${product?.category_name
+                                    .toString()
+                                    .trim()
+                                    .replace(/-/g, "~")
+                                    .replace(/\s+/g, "-")
+                                    .toLowerCase()}`,
+                                  {
+                                    state: {
+                                      id: product?.id,
+                                      name: product?.category_name,
+                                    },
+                                  }
+                                );
+                                handleClearInput();
+                              }}
+                            >
+                              <div className="main-search-product d-flex align-items-center flex-grow-1">
+                                <img
+                                  src={product.image}
+                                  alt={product.category_name}
+                                  className="searchimage"
+                                />
+                                <p className="ms-3 mb-0 text-wrap searchtitle">
+                                  {product.category_name}
+                                </p>
+                              </div>
+                              <div>
+                                <FaChevronRight className="fs-5 searcharrow" />
+                              </div>
+                            </div>
+                          ))
+                        ) : (
+                          // Show "Not Found" only when search is performed and no results are found
+                          <div
+                            className="text-center p-4 fw-bold not-found"
+                          >
+                            Not Found Data
+                          </div>
+                        )
+                      ) : null}
                     </div>
                   </div>
                 </>
@@ -810,7 +876,6 @@ export const BottamHeader = () => {
           </Col>
         </Row>
       </Modal>
-
       <Modal
         show={showSuccessModal}
         onHide={handleSuccessClose}
