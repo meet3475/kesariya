@@ -145,7 +145,7 @@ export const Homereview = () => {
   };
 
   return (
-    <div className="review-bg pt-4 pb-4">
+    <div className="review-bg py-5">
       <Container>
         <div
           className="text-center fs-3 saree-heading pt-3"

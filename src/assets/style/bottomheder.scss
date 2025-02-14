@@ -1,7 +1,7 @@
 @import "_mixins";
 
 .top-header-container {
-  background-color: black;
+  background-color: $them-black-color;
   color: white;
   font-family: Jost;
 
@@ -407,7 +407,7 @@
   right: 1.5rem;
   cursor: pointer;
   font-size: 1.5rem;
-  color: black;
+  color: $them-black-color;
 }
 
 .dropdown-menu-custom .dropdown-item {

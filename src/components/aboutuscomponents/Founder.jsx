@@ -6,7 +6,7 @@ import foundercard from "../../assets/images/foundercardbg.webp";
 import foundercard2 from "../../assets/images/foundercardbg2.webp";
 export const Founder = () => {
   return (
-    <div className="founder-bg">
+    <div className="founder-bg pb-5">
       <Container>
         <Row>
           <h1 className="text-center them-font mt-3 saree-heading">Founders</h1>
@@ -17,7 +17,7 @@ export const Founder = () => {
               alt="border"
             />
           </div>
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center pb-5 pt-3">
             <p className="text-center">
               Our firm has adopted a total quality management policy, which
               enables us to maintain the highest quality standards in our
@@ -30,10 +30,10 @@ export const Founder = () => {
           </div>
           <Col md={6} sm={12} xs={12} className="p-3">
             <Card
-              className="rounded-5"
               style={{
                 border: "2px solid $them-black-color",
                 backgroundImage: `url(${foundercard})`,
+                borderRadius : "2.35rem"
               }}
             >
               <div className="row no-gutters">
@@ -41,12 +41,12 @@ export const Founder = () => {
                   <Card.Img
                     src={founder1}
                     className="position-absolute"
-                    style={{ width: "35%", bottom: "0px", overflow: "hidden" }}
+                    style={{ width: "35%", bottom: "0px", left:"0px"}}
                   />
                 </div>
-                <div className="col-md-8 p-3">
+                <div className="col-md-8">
                   <Card.Body>
-                    <p className="text-start them-font ">
+                    <p className="text-start them-font my-8">
                       As a Founder and CEO of Kesaria Textile Company, I
                       consider quality and innovation as our success targets and
                       would like to express my gratitude to everyone who gave
@@ -54,7 +54,7 @@ export const Founder = () => {
                     </p>
                     <div className="ceoimage">
                       <p className="fs-2 fw-bold them-font">Ritesh Modi</p>
-                      <button className="fs-6 fs-bold them-font them-bg textwhite-color p-3 rounded-4 border-0">
+                      <button className="fs-6 fs-bold them-font them-bg p-2 textwhite-color rounded-4 border-0">
                         <span>Founder & CEO</span>
                       </button>
                     </div>
@@ -65,10 +65,10 @@ export const Founder = () => {
           </Col>
           <Col md={6} sm={12} xs={12} className="p-3">
             <Card
-              className="rounded-5 "
               style={{
                 border: "2px solid $them-black-color",
                 backgroundImage: `url(${foundercard2})`,
+                borderRadius : "2.35rem"
               }}
             >
               <div className="row no-gutters">
@@ -76,10 +76,10 @@ export const Founder = () => {
                   <Card.Img
                     src={founder1}
                     className="position-absolute"
-                    style={{ width: "35%", bottom: "0" }}
+                    style={{ width: "35%", bottom: "0", left: "0" }}
                   />
                 </div>
-                <div className="col-md-8 p-3">
+                <div className="col-md-8">
                   <Card.Body className="">
                     <p className="text-start them-font ">
                       As a Founder and CEO of Kesaria Textile Company, I
@@ -89,7 +89,7 @@ export const Founder = () => {
                     </p>
                     <div className="ceoimage">
                       <p className="fs-2 fw-bold them-font">Ritesh Modi</p>
-                      <button className="fs-6 fs-bold them-font them-bg textwhite-color p-3 rounded-4 border-0 ">
+                      <button className="fs-6 fs-bold them-font them-bg textwhite-color p-2 rounded-4 border-0 ">
                         <span>Founder & CEO</span>
                       </button>
                     </div>

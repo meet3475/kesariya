@@ -151,7 +151,7 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  box-shadow: 2px 2px 0 0 black;
+  box-shadow: 2px 2px 0 0 $them-black-color;
 }
 
 .message-button:hover {
@@ -446,7 +446,7 @@
 
 .custom-bgcolor-change-carousel {
   .carousel-indicators [data-bs-target] {
-    background-color: black;
+    background-color: $them-black-color;
   }
 
   .carousel-indicators .active {
@@ -482,7 +482,7 @@
 .btn-black-to-red-color-move {
   background-color: transparent;
   border: none;
-  background-color: black;
+  background-color: $them-black-color;
   transition: all 0.3s;
   position: relative;
   cursor: pointer;
@@ -558,7 +558,7 @@
   transition: all 0.3s;
   position: relative;
   cursor: pointer;
-  color: black;
+  color: $them-black-color;
   overflow: hidden !important;
 
   span {
@@ -585,7 +585,7 @@
     width: 0%;
     height: 100%;
     display: block;
-    background: black;
+    background: $them-black-color;
     position: absolute;
     -ms-transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
@@ -659,7 +659,7 @@
     width: 0%;
     height: 100%;
     display: block;
-    background: black;
+    background: $them-black-color;
     position: absolute;
     -ms-transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
@@ -704,7 +704,7 @@
   transition: all 0.3s;
   position: relative;
   cursor: pointer;
-  color: black;
+  color: $them-black-color;
   overflow: hidden !important;
 
   span {
@@ -957,7 +957,7 @@ body {
   }
 }
 .VIpgJd-ZVi9od-xl07Ob-OEVmcd {
-  box-shadow: 2px 2px 0 0 black !important;
+  box-shadow: 2px 2px 0 0 $them-black-color !important;
   border-radius: 0 0 10px 10px;
   background-color: #fff;
   margin-left: 3px;

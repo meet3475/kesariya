@@ -9,7 +9,7 @@ export const Companyinfo = () => {
 
   return (
     <Container style={{ overflow: "hidden" }}>
-      <Row>
+      <Row className="pb-5 pt-3">
         <Col>
           <div className="text-center them-font saree-heading fs-1">
             Kesaria Textile Company

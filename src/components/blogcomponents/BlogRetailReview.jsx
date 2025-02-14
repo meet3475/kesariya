@@ -6,9 +6,9 @@ import { FreeMode, Navigation } from "swiper/modules";
 
 export const Blogretailreview = ({ reviewdata }) => {
   return (
-    <div className="home-bgimage">
+    <div className="home-bgimage py-5">
       <div className="container blog-review-swiper them-font p-0">
-        <div className="p-3">
+        <div className="">
           <div className="text-center saree-heading pt-3">
             Our Retails Reviews{" "}
           </div>

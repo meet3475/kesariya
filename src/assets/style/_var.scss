@@ -47,13 +47,13 @@ $them-black-color: black;
 }
 
 .them-bg {
-  background-color: #da212b;
+  background-color: $theme-color;
 }
 .them-border {
   border: 2px solid $them-black-color;
 }
 .them-font-color {
-  color: #da212b;
+  color: $theme-color;
 }
 .graybackgroundcolor {
   background-color: #f9f9f9;

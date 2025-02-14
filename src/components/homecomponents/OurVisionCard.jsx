@@ -31,7 +31,7 @@ export const OurvisionCard = () => {
   ];
 
   return (
-    <div className="home-vissonbg pt-5" style={{ overflow: "hidden" }}>
+    <div className="home-vissonbg" style={{ overflow: "hidden", paddingTop: "100px", paddingBottom:"30px" }}>
       <Container>
         <div className="row pt-3 gap-4">
           <div className="d-flex flex-column flex-lg-row gap-3">
@@ -39,7 +39,7 @@ export const OurvisionCard = () => {
               className="col-md-12 col-lg-6 mt-md-0"
               style={{ position: "relative" }}
             >
-              <div className=" d-none  d-lg-block blog-redsquareimage"></div>
+              <div className="d-none d-lg-block blog-redsquareimage"></div>
               <div className="h-100">
                 <Swiper
                   pagination={true}
@@ -66,7 +66,7 @@ export const OurvisionCard = () => {
               className="col-md-12 col-lg-6 pb-5 ps-md-5 them-font"
               data-aos="fade-left"
             >
-              <div className="pb-2">
+              <div className="pb-2 px-3">
                 <div>
                   <h2 className="text-md-end fw-semibold text-sm-start">
                     Our Vision

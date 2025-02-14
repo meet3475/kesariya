@@ -16,7 +16,7 @@
   font-family: Lobster, sans-serif;
   cursor: pointer;
   box-shadow: 3px 3px 0 0;
-  border: 1px solid black;
+  border: 1px solid $them-black-color;
 }
 
 .main {
@@ -36,7 +36,7 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  color: black;
+  color: $them-black-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .product-card:hover {
-  border: 1px solid black;
+  border: 1px solid $them-black-color;
   box-shadow: 3px 3px 0px 0px;
 }
 
@@ -106,7 +106,7 @@
   color: $secondary-theme-color;
   background-color: $theme-color;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .product-card:hover .button-icon1 {
@@ -216,7 +216,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    color: black;
+    color: $them-black-color;
     display: flex;
     justify-content: center;
   }
@@ -475,7 +475,7 @@
 .home-sellerbgimage {
   .swiper-button-prev,
   .swiper-button-next {
-    color: #000;
+    color: $them-black-color;
     width: 40px;
     height: 40px;
   }
@@ -486,11 +486,11 @@
     padding: 8px 12px;
     background: #ededed;
     border-radius: 100px;
-    color: #000;
+    color: $them-black-color;
   }
 
   .best-saree-maincard:hover {
-    border: 2px solid black;
+    border: 2px solid $them-black-color;
   }
 }
 
@@ -511,7 +511,7 @@
 }
 
 .image-gallery-icon:hover {
-  color: #000 !important;
+  color: $them-black-color !important;
 }
 
 .buttonhover:hover {

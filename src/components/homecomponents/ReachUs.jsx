@@ -6,7 +6,7 @@ const ReachUs = () => {
   return (
     <div className="home-reachusbg" style={{ overflow: "hidden" }}>
       <Container className="p-0">
-        <Row className="my-5" style={{padding : "30px"}}>
+        <Row className="my-5" style={{padding : "25px"}}>
           <Col sm={12} md={12} lg={6} xl={6}>
             <div className="reachus-text px-2">
               <h1 className="text-start them-font">Reach to Us</h1>

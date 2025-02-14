@@ -39,7 +39,7 @@ export const ManufacturerCard = () => {
 
   return (
     <>
-      <Container className="manufacturebgimg new-banner-style h-100 w-100 px-3">
+      <Container className="manufacturebgimg new-banner-style h-100 w-100 px-3 pb-3">
         <div className="new-banner-style-container row d-grid align-content-center">
           <Col xs={12} sm={10} md={8} lg={12} className="pt-lg-5 ps-3 ps-lg-5">
             <div>

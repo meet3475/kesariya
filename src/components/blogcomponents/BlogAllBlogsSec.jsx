@@ -41,7 +41,7 @@ const BlogList = ({
   const isMobile = useMediaQuery("(max-width:600px)");
 
   return (
-    <div className="blog-bg">
+    <div className="blog-bg py-5">
       {/* ref={blogBgRef} */}
       <Container className="mt-lg-4">
         <Row>

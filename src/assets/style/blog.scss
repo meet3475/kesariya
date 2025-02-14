@@ -99,7 +99,7 @@
   .blog-review-swiper {
     .swiper-button-prev,
     .swiper-button-next {
-      color: #000;
+      color: $them-black-color;
       width: 40px;
       height: 40px;
     }
@@ -164,7 +164,7 @@
   }
 
   .view-more-btn:hover {
-    background-color: black;
+    background-color: $them-black-color;
   }
 }
 

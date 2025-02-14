@@ -47,7 +47,7 @@ export const BestSellerSareeSlider = ({ data }) => {
   };
 
   return (
-    <div className="home-sellerbgimage">
+    <div className="home-sellerbgimage"> 
       {data.map((item, index) => (
         <div
           className="slider-bg"
@@ -56,6 +56,7 @@ export const BestSellerSareeSlider = ({ data }) => {
             backgroundImage: item.background_image
               ? `url(${item.background_image})`
               : "none",
+            // paddingBottom : "30px"
           }}
         >
           <Container fluid className="slide-swiper">

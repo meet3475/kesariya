@@ -13,9 +13,9 @@ const Helpus = ({ questionsAnswers }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="home-helpusbg pt-2 pb-4">
-      <Container className="">
-        <Row className="">
+    <div className="home-helpusbg py-5">
+      <Container>
+        <Row>
           <Col xl={6} lg={12} xs={12}>
             <p className="fs-3 my-3 fw-bolder">What can we help with today?</p>
             {questionsAnswers.map((item, index) => (

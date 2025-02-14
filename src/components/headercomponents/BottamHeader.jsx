@@ -161,7 +161,7 @@ export const BottamHeader = () => {
   const handleClick = () => {
     const daata = localStorage.removeItem("selectedSection");
     navigate("/");
-    window.location.reload();
+    // window.location.reload();
   };
 
   useEffect(() => {
@@ -678,7 +678,7 @@ export const BottamHeader = () => {
                           <div
                             className="text-center p-4 fw-bold not-found"
                           >
-                            Not Found Data
+                            Product Not Found
                           </div>
                         )
                       ) : null}

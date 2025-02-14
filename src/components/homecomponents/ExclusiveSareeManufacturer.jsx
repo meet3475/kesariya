@@ -6,12 +6,12 @@ const ExclusiveSareeManufacturer = () => {
   return (
     <>
       <div
-        className="ExclusiveSareeManufacturer py-3 px-2"
+        className="ExclusiveSareeManufacturer"
         style={{ textAlign: "justify" }}
       >
         <Container>
           <h1
-            className="text-center saree-heading pt-3"
+            className="text-center saree-heading"
             style={{ fontFamily: "Jost" }}
           >
             Exclusive Saree Manufacturer in {storageData?.locationReplace}

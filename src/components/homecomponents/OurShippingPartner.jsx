@@ -5,7 +5,7 @@ import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import imageBorder from "../../assets/images/bestsellerborder.webp";
 export const OurShippingPartner = ({ shippingPartnerData }) => {
   return (
-    <Container fluid className="our-shhiping-partner">
+    <Container fluid className="our-shhiping-partner py-3">
       <Row>
         <Col className="mb-4">
           <div className="text-center saree-heading pt-3 ">

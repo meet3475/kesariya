@@ -36,7 +36,7 @@ export const MissionCard = () => {
   ];
 
   return (
-    <Container className="mission-sec py-2" style={{ overflow: "hidden" }}>
+    <Container className="mission-sec py-5" style={{ overflow: "hidden" }}>
       <div className="row justify-content-center">
         <div className="d-flex flex-column flex-lg-row py-5 mt-5 mt-lg-0 them-font">
           <div className="col-12 col-md-12 col-lg-6 order-2 order-lg-1 container-info-mission">

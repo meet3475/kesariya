@@ -129,8 +129,8 @@ export const BlogOwnStorySec = () => {
 
   return (
     <>
-      <Container className="py-2">
-        <Row>
+      <Container>
+        <Row className="py-5">
           <Col xs={12} md={12} lg={6}>
             <div className="them-font">
               <h5 className="fs-2 text-start">Start Your Own Success Story</h5>

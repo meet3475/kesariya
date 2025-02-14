@@ -6,7 +6,7 @@ import Blogimg3 from "../../assets/images/blogZHimg3.webp";
 
 export const BlogZeroHero = ({ counter }) => {
   return (
-    <div className="blog-bg1">
+    <div className="blog-bg1 py-5">
       <Container style={{ overflow: "hidden" }}>
         <div className="row">
           <div className="d-flex flex-column flex-lg-row p-lg-3 mt-3">

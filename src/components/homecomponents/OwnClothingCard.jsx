@@ -45,7 +45,7 @@ export const OwnClothingCard = ({ ImageData }) => {
     ],
   };
   return (
-    <Container className="p-0 own-card-rainbow">
+    <Container className="pb-5 own-card-rainbow">
       <div className="row ">
         <div className="col-12">
           <div className="text-center saree-heading ">
