@@ -1,9 +1,12 @@
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import imageBorder from "../../assets/images/bestsellerborder.webp";
-import founder1 from "../../assets/images/founder1.webp";
+// import founder1 from "../../assets/images/founder1.webp";
 import foundercard from "../../assets/images/foundercardbg.webp";
 import foundercard2 from "../../assets/images/foundercardbg2.webp";
+import founder1 from "../../assets/images/Founder_Image_-01-removebg-preview.png"
+import founder2 from "../../assets/images/Founder_Image_-02-removebg-preview.png"
+
 export const Founder = () => {
   return (
     <div className="founder-bg pb-5">
@@ -74,9 +77,9 @@ export const Founder = () => {
               <div className="row no-gutters">
                 <div className="col-md-4 position-reletive">
                   <Card.Img
-                    src={founder1}
+                    src={founder2}
                     className="position-absolute"
-                    style={{ width: "35%", bottom: "0", left: "0" }}
+                    style={{ width: "35%", bottom: "0", left: "13px" }}
                   />
                 </div>
                 <div className="col-md-8">
