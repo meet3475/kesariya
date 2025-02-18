@@ -41,9 +41,9 @@ export const ManufacturerCard = () => {
     <>
       <Container className="manufacturebgimg new-banner-style h-100 w-100 px-3 pb-3">
         <div className="new-banner-style-container row d-grid align-content-center">
-          <Col xs={12} sm={10} md={8} lg={12} className="pt-lg-5 ps-3 ps-lg-5">
+          <Col xs={12} sm={10} md={8} lg={12} className="pt-lg-5 ps-3 ps-lg-5 manu-box">
             <div>
-              <p className="fw-bolder fs-3 text-light pt-1">
+              <p className="fw-bolder fs-3 text-light pt-1 manu-font">
                 Looking for a reliable manufacturer?
               </p>
               <div className="border-0 rounded-4">
@@ -56,11 +56,11 @@ export const ManufacturerCard = () => {
                       >
                         <Row>
                           <Col lg={6} md={12} sm={12} className="p-0 pe-lg-3">
-                            <Form.Group className="flex-grow-1 mb-2 mb-sm-0">
+                            <Form.Group className="flex-grow-1 mb-2 mb-sm-0 manu-gruop">
                               <Form.Control
                                 type="text"
                                 placeholder="Name"
-                                className="rounded-5 p-2 ps-3"
+                                className="rounded-5 p-2 ps-3 form-manufacture"
                                 {...formik.getFieldProps("name")}
                                 isInvalid={
                                   formik.touched.name && formik.errors.name
@@ -72,12 +72,12 @@ export const ManufacturerCard = () => {
                             </Form.Group>
                           </Col>
                           <Col lg={6} md={12} sm={12} className="p-0 ps-lg-2">
-                            <Form.Group className="flex-grow-1 mb-2 mb-sm-0">
+                            <Form.Group className="flex-grow-1 mb-2 mb-sm-0 manu-gruop">
                               <Form.Control
                                 type="text"
                                 placeholder="Phone Number"
                                 maxLength={10}
-                                className="rounded-5 p-2 ps-3"
+                                className="rounded-5 p-2 ps-3 form-manufacture"
                                 {...formik.getFieldProps("phoneNumber")}
                                 isInvalid={
                                   formik.touched.phoneNumber &&

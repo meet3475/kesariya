@@ -205,9 +205,9 @@ const SilkCotton = ({ CategorydetailInfo }) => {
                     alt="Silk Cotton Inner"
                   />
                   <a target="_blank" href={CategorydetailInfo.catelog}>
-                    <div className="download-icon">
+                    {/* <div className="download-icon">
                       <GrDownload />
-                    </div>
+                    </div> */}
                   </a>
                   <button
                     className="border-0 silkcottonbtn btn-red-to-black-color-move rounded-5"

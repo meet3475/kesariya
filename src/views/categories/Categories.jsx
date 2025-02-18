@@ -220,9 +220,9 @@ const Categories = () => {
                                     href={sub?.catelog}
                                     className="main"
                                   >
-                                    <div className="download-icon">
+                                    {/* <div className="download-icon">
                                       <GrDownload style={{marginTop :"9px"}} />
-                                    </div>
+                                    </div> */}
                                   </a>
                                 </div>
                                 <Card.Img

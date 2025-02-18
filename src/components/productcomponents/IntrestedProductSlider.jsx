@@ -110,9 +110,9 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
                             href={product?.catelog}
                             className="main"
                           >
-                            <div className="download-icon">
+                            {/* <div className="download-icon">
                               <GrDownload style={{ marginTop: "9px" }} />
-                            </div>
+                            </div> */}
                           </a>
                         </div>
                         <div className="custom-img-aspect">

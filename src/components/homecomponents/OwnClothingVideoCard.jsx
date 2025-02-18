@@ -57,7 +57,7 @@ export const OwnclothingvideoCard = ({ manufacturevideo }) => {
               className="mt-5 pb-2 own-video-card"
               style={{ cursor: "pointer", paddingTop: "1px" }}
             >
-              <div style={{ position: "relative", paddingTop: "56.25%" }}>
+              <div style={{ position: "relative", paddingTop: "56.25%" }} className="own_text">
                 <ReactPlayer
                   url={hasVideo ? firstVideo.video_url : null}
                   controls

@@ -97,3 +97,9 @@ h5 {
     margin-bottom: 115px;
   }
 }
+
+@media (max-width: 340px) {
+  .brochurebtn {
+    padding: 10px 5px !important; 
+  }
+}
