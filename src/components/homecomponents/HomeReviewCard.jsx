@@ -145,7 +145,7 @@ export const Homereview = () => {
   };
 
   return (
-    <div className="review-bg py-5">
+    <div className="review-bg">
       <Container>
         <div
           className="text-center fs-3 saree-heading pt-3"
@@ -174,7 +174,7 @@ export const Homereview = () => {
                   <img src={reviewshape1} alt="Review Shape 1" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3 card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -215,7 +215,7 @@ export const Homereview = () => {
 
               <div className="d-flex flex-column sm-review">
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark "
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -253,7 +253,7 @@ export const Homereview = () => {
                 </Card>
 
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -299,7 +299,7 @@ export const Homereview = () => {
                   <img src={reviewshape3} alt="Review Shape 3" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -353,7 +353,7 @@ export const Homereview = () => {
                   <img src={reviewshape1} alt="Review Shape 1" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3 card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -394,7 +394,7 @@ export const Homereview = () => {
 
               <div className="d-flex flex-column sm-review">
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -431,7 +431,7 @@ export const Homereview = () => {
                 </Card>
 
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -477,7 +477,7 @@ export const Homereview = () => {
                   <img src={reviewshape3} alt="Review Shape 3" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -533,7 +533,7 @@ export const Homereview = () => {
                   <img src={reviewshape1} alt="Review Shape 1" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3 card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -573,7 +573,7 @@ export const Homereview = () => {
 
               <div className="d-flex flex-column sm-review">
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -611,7 +611,7 @@ export const Homereview = () => {
                   </Card.Text>
                 </Card>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -655,7 +655,7 @@ export const Homereview = () => {
                   <img src={reviewshape3} alt="Review Shape 3" width={"50px"} />
                 </div>
                 <Card
-                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark"
+                  className="mb-3 p-3 theme-shadow rounded-5 border border-dark card_style"
                   style={{ width: "20rem", height:"17rem", overflow: "hidden" }}
                 >
                   <div className="d-flex">
@@ -704,7 +704,7 @@ export const Homereview = () => {
           {reviewsData.map((review, index) => (
             <div key={index} className="d-flex justify-content-center">
               <Card
-                className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3"
+                className="mb-3 p-3 theme-shadow rounded-5 border border-dark mt-3 card_style"
                 style={{ width: "20rem", overflow: "hidden" }}
               >
                 <div className="d-flex">
@@ -722,7 +722,7 @@ export const Homereview = () => {
                     {review.initial}
                   </div>
                   <div className="p-3">
-                    <Card.Title>{review.name}</Card.Title>
+                    <Card.Title className="review_name">{review.name}</Card.Title>
                     <Card.Text>
                       {[...Array(review.rating)].map((_, i) => (
                         <i key={i} className="bi bi-star-fill text-warning"></i>
@@ -730,7 +730,7 @@ export const Homereview = () => {
                     </Card.Text>
                   </div>
                 </div>
-                <div className="border-top my-2"></div>
+                <div className="border-top my-2 border_card"></div>
                 <div
                   style={{
                     maxHeight: "100px",
@@ -738,7 +738,7 @@ export const Homereview = () => {
                     scrollbarWidth: "none",
                   }}
                 >
-                  <Card.Text>{review.review}</Card.Text>
+                  <Card.Text className="card_review">{review.review}</Card.Text>
                 </div>
               </Card>
             </div>

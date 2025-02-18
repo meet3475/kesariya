@@ -9,20 +9,44 @@ import Breadcrumb from "../../components/breadcrumbcomponents/Breadcrumb";
 import { IntrestedProductSlider } from "../../components/productcomponents/IntrestedProductSlider";
 import { Helmet } from "react-helmet";
 import Loader from "../../components/loaderspinnercomponents/Loader";
+import { useSelector } from "react-redux";
 
 const CategoriesDetailpage = ({ selectedLocation }) => {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
 
-  const [CategorydetailintrestedPro, setCategorydetailintrestedPro] = useState([]);
+  const [CategorydetailintrestedPro, setCategorydetailintrestedPro] = useState(
+    []
+  );
   const [CategorydetailBaner, setCategorydetailBaner] = useState([]);
   const [CategorydetailInfo, setCategorydetailInfo] = useState([]);
   const [breadcrumbname, setBreadcrumbname] = useState("");
+  const locationData = useSelector((state) => state.location.value);
 
   // const { id = 0, from } = location?.state || {};
   // console.log("id::", location?.state);
 
   const { subCategoryName } = useParams();
+  const { categoryName } = useParams();
+  console.log("categoryName", categoryName);
+
+  const [storageData, setStorageData] = useState({
+    locationDynamic: "LOCATION_DY",
+    locationReplace:
+      localStorage?.getItem("country_name") === "India"
+        ? localStorage?.getItem("city_name")
+        : localStorage?.getItem("country_name"),
+  });
+
+  useEffect(() => {
+    setStorageData({
+      locationDynamic: "LOCATION_DY",
+      locationReplace:
+        locationData?.country_name == "India"
+          ? locationData?.city_name
+          : locationData?.country_name,
+    });
+  }, [locationData]);
 
   const FetchCategoryDetailData = async () => {
     setLoading(true);
@@ -36,6 +60,7 @@ const CategoriesDetailpage = ({ selectedLocation }) => {
 
       const data = response?.data?.DATA;
       setCategorydetailBaner(data[0].data[0].image);
+      console.log("data[1].category_label::", data[1].category_label);
       setBreadcrumbname(data[1].category_label);
       setCategorydetailInfo({ ...(data[1].data || {}) });
       setCategorydetailintrestedPro(data[2].data || {});
@@ -276,7 +301,16 @@ const CategoriesDetailpage = ({ selectedLocation }) => {
               },
               {
                 navText: breadcrumbname,
-                path: "/",
+                path: `${
+                  storageData?.locationReplace?.length > 0
+                    ? "/" + storageData.locationReplace
+                    : ""
+                }/categories/${breadcrumbname
+                  .toString()
+                  .trim()
+                  .replace(/-/g, "~")
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`,
               },
             ]}
           />

@@ -47,7 +47,6 @@
     color: white;
   }
 
-
   @media (max-width: 2000px) {
     .slide-number-column {
       flex-direction: row;
@@ -87,6 +86,23 @@
 
   .home-hero-main-image {
     width: 85%;
+  }
+
+  @media screen and (max-width: 430px) {
+    .hero_slide_img {
+      height: 250px;
+    }
+  }
+  @media screen and (max-width: 330px) {
+    .hero_slide_img {
+      height: 210px;
+    }
+  }
+
+  @media screen and (max-width: 304px) {
+    .hero_slide_img {
+      height: 200px;
+    }
   }
 }
 
@@ -150,7 +166,7 @@
 .home-blogbgimage {
   background-image: url("../../assets/images/image 627.webp");
   padding: 30px 0 40px;
-  
+
   .swiper-button-prev,
   .swiper-button-next {
     color: $them-black-color;
@@ -938,6 +954,19 @@
   }
 }
 
+@media (max-width: 430px) {
+  .mission-text {
+    font-size: 14px !important;
+  }
+  .responsive-img {
+    height: 50px !important;
+    width: 50px !important;
+  }
+  .responsive-text {
+    font-size: 14px !important;
+  }
+}
+
 .home-helpusbg {
   background-image: url("../images/Helpusbg.webp");
 }
@@ -967,6 +996,8 @@
 
 .review-bg {
   background-image: url("../images/review-bg.webp");
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 
   @media (max-width: 576px) {
     .review-shape-1 {
@@ -999,6 +1030,42 @@
 
   .carousel-indicators .active {
     background-color: $theme-color !important;
+  }
+
+  // @media screen and (max-width: 330px) {
+
+  //  }
+
+  // @media screen and (max-width: 304px) {
+
+  //  }
+}
+
+@media screen and (max-width: 430px) {
+  .review-bg {
+    padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .card_style {
+    width: 16rem !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    padding: 12px !important;
+  }
+  .review_name {
+    font-size: 15px !important;
+  }
+  .rounded-circle {
+    font-size: 40px !important;
+    width: 65px !important;
+    height: 65px !important;
+  }
+  .card_review {
+    font-size: 14px !important;
+  }
+  .border_card {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
   }
 }
 
@@ -1191,7 +1258,6 @@
       padding-top: 165px;
       width: 100%;
       aspect-ratio: 2/1;
-
       background-image: url("../images/manufechtureresponsiveimgmobile1.webp");
     }
 
@@ -1206,6 +1272,16 @@
       .our-shipping-card {
         height: 50px !important;
       }
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .manufacturebgimg {
+      margin-left: 0.5rem !important;
+    }
+    .new-banner-style .new-banner-style-container {
+      padding-top: 150px;
+      width: 96%;
     }
   }
 

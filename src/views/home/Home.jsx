@@ -359,14 +359,14 @@ export const Homepage = () => {
             ImageData={ownClothingCard}
             manufacturevideo={manufacturevideo}
           />
-          <Shopbycategory shopbycategory={shopbycategory} />
+          {/* <Shopbycategory shopbycategory={shopbycategory} /> */}
           <Blogslider data={sliderimage} />
           <MissionCard />
           <OurvisionCard />
           <LatestBlog latestBlog={latestBlog} />
           <Helpus questionsAnswers={questionsAnswers} />
           <Homereview />
-          <OurShippingPartner shippingPartnerData={shippingPartnerData} />
+          {/* <OurShippingPartner shippingPartnerData={shippingPartnerData} /> */}
           <ReachUs />
           <Companyinfo />
 
@@ -458,12 +458,12 @@ export const Homepage = () => {
                       >
                         <Form.Group className="mb-3" controlId="formFullName">
                           <Form.Label className="fw-medium">
-                            Full (आपका नाम)
+                            Your Name (आपका नाम)
                             <span className="text-danger">*</span>
                           </Form.Label>
                           <Form.Control
                             type="text"
-                            placeholder="Full name"
+                            placeholder="Your Name"
                             name="name"
                             value={values.name}
                             onChange={handleChange}

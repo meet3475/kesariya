@@ -114,9 +114,9 @@ export const BestSellerSareeSlider = ({ data }) => {
                             href={row?.catelog}
                             className="main"
                           >
-                            <div className="download-icon">
+                            {/* <div className="download-icon">
                               <GrDownload style={{marginTop :"5px", marginLeft:"1px", marginBottom: "-4px"}} />
-                            </div>
+                            </div> */}
                           </a>
                         </div>
                         <Card.Img

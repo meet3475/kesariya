@@ -44,7 +44,7 @@ export const MissionCard = () => {
               <h2 className="text-start">Our Mission</h2>
             </div>
             <div>
-              <h4 className="text-start fs-6 fw-medium">
+              <h4 className="text-start fs-6 fw-medium mission-text">
                 Kesaria Textile Company aims to be the industry leader in
                 integrity, honesty, and efficiency. Through innovation and the
                 development of our intellectual capacity, we will enhance our
@@ -70,12 +70,12 @@ export const MissionCard = () => {
                     >
                       <div className="d-flex align-items-center">
                         <img
-                          className="p-2"
+                          className="p-2 responsive-img"
                           src={item.image}
                           style={{ height: "60px", width: "60px" }}
                           alt="Mission"
                         />
-                        <div className="fw-bolder">{item.question}</div>
+                        <div className="fw-bolder responsive-text">{item.question}</div>
                       </div>
                       <div>
                         {openIndex === index ? (

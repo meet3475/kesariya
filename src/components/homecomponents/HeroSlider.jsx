@@ -54,6 +54,7 @@ const Heroslider = ({ sliderData }) => {
                                 alt="Slide"
                                 style={{ width: "100%" }}
                                 loading="lazy"
+                                className="hero_slide_img"
                               />
                             </div>
                           </div>

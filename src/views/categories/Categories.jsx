@@ -168,25 +168,47 @@ const Categories = () => {
                             <Col key={index} className="mb-4">
                               <Card
                                 className="product-card"
+                                // onClick={() =>
+                                //   navigate(
+                                //     `${storageData?.locationReplace?.length > 0
+                                //       ? "/" + storageData.locationReplace
+                                //       : ""
+                                //     }/categories-detail/${sub.category_name.replace(
+                                //       /[^a-zA-Z]/g,
+                                //       ""
+                                //     ).toLowerCase()}`,
+
+                                //     {
+                                //       state: {
+                                //         id: sub?.id,
+                                //         name: sub?.category_name,
+                                //       },
+                                //     }
+                                //   )
+                                // }
                                 onClick={() =>
                                   navigate(
-                                    `${storageData?.locationReplace?.length > 0
-                                      ? "/" + storageData.locationReplace
-                                      : ""
-                                    }/categories-detail/${sub.category_name.replace(
-                                      /[^a-zA-Z]/g,
-                                      ""
-                                    ).toLowerCase()}`,
-
+                                    `${
+                                      storageData
+                                        ?.locationReplace
+                                        ?.length > 0
+                                        ? "/" +
+                                          storageData.locationReplace
+                                        : ""
+                                    }/categories-detail/${sub?.category_name
+                                      ?.toString()
+                                      .trim()
+                                      .replace(/-/g, "~")
+                                      .replace(/\s+/g, "-")
+                                      .toLowerCase()}`,
                                     {
                                       state: {
                                         id: sub?.id,
-                                        name: sub?.category_name,
+                                        name: sub?.category_name
                                       },
                                     }
                                   )
                                 }
-                                
                                 style={{
                                   background: sub.color_code,
                                   cursor: "pointer",
@@ -207,6 +229,7 @@ const Categories = () => {
                                   variant="top"
                                   src={sub.image}
                                   className="setimage"
+                                  
                                 />
                                 <button
                                   className="btn btn-danger button-icon rounded-5"

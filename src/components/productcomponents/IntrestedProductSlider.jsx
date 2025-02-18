@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Card, button } from "react-bootstrap";
 import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
@@ -7,10 +7,14 @@ import imageBorder from "../../assets/images/bestsellerborder.webp";
 import { GrDownload } from "react-icons/gr";
 import EnquiryModel from "../enquirymodelcomponents/EnquiryModel";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
+  const navigate = useNavigate();
   const swiperRef = useRef(null);
   const [show, setShow] = useState(false);
+  const locationData = useSelector((state) => state.location.value);
+
 
   const handleClose = () => setShow(false);
 
@@ -18,6 +22,25 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
     event.stopPropagation();
     setShow(true);
   };
+
+  const [storageData, setStorageData] = useState({
+      locationDynamic: "LOCATION_DY",
+      locationReplace:
+        localStorage?.getItem("country_name") === "India"
+          ? localStorage?.getItem("city_name")
+          : localStorage?.getItem("country_name"),
+    });
+  
+    useEffect(() => {
+      setStorageData({
+        locationDynamic: "LOCATION_DY",
+        locationReplace:
+          locationData?.country_name == "India"
+            ? locationData?.city_name
+            : locationData?.country_name,
+      });
+    }, [locationData]);
+  
 
   return (
     <>
@@ -59,6 +82,26 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
                           cursor: "pointer",
                         }}
                         className="product-card"
+                        onClick={() =>
+                          navigate(
+                            `${
+                              storageData?.locationReplace?.length > 0
+                                ? "/" + storageData.locationReplace
+                                : ""
+                            }/categories-detail/${product?.category_name
+                              ?.toString()
+                              .trim()
+                              .replace(/-/g, "~")
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`,
+                            {
+                              state: {
+                                id: product?.id,
+                                name: product?.category_name,
+                              },
+                            }
+                          )
+                        }
                       >
                         <div className="main">
                           <a
@@ -68,7 +111,7 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
                             className="main"
                           >
                             <div className="download-icon">
-                              <GrDownload style={{marginTop :"9px"}} />
+                              <GrDownload style={{ marginTop: "9px" }} />
                             </div>
                           </a>
                         </div>
@@ -92,7 +135,10 @@ export const IntrestedProductSlider = ({ CategorydetailintrestedPro }) => {
                         >
                           GET QUOTE
                         </button>
-                        <Card.Text className="text-center mt-1 txtfamily fw-medium" style={{letterSpacing : "1px"}}>
+                        <Card.Text
+                          className="text-center mt-1 txtfamily fw-medium"
+                          style={{ letterSpacing: "1px" }}
+                        >
                           <span className="fs-14 text-light">
                             {product.category_name}
                           </span>

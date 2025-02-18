@@ -64,6 +64,14 @@ export const BottamHeader = () => {
   //  const { id, name } = useParams();
 
   const dropdownRef = useRef(null);
+  // const [storeWidth, setStoreWidth] = useState(0);
+
+  // useEffect(() => {
+  //   if (dropdownRef.current) {
+  //     setStoreWidth(parent.current.offsetWidth);
+  //   }
+  // }, []);
+
   const handleMouseEnter = (index) => {
     setOpenCategory(index);
   };
@@ -154,8 +162,14 @@ export const BottamHeader = () => {
   
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setDropdownVisible(false);
+      // setDropdownVisible(false);
+      setOpenCategory(null);  // Close the dropdown safely
     }
+
+      document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
   };
 
   const handleClick = () => {
@@ -300,12 +314,13 @@ export const BottamHeader = () => {
           <div className="nav-container px-3 mt-0 mt-lg-3">
             <div className="row d-none d-lg-block">
               <div
+                // ref={dropdownRef}
                 className="dropdown-container d-flex justify-content-evenly px-2"
                 style={{
                   listStyle: "none",
                   background: "white",
                   borderRadius: "40px 40px 0 0",
-                  cursor: "pointer",
+                  cursor: "pointer"
                 }}
               >
                 {categories.length > 0 ? (
@@ -360,13 +375,15 @@ export const BottamHeader = () => {
                           )}
                         </Link>
                         <div
-                          className="dropdown-menu ps-0 pt-4 mt-0"
+                          className="dropdown-menu ps-0 pt-4 mt-0 drop-style"
                           style={{
                             opacity: openCategory === index ? 1 : 0,
                             visibility:
                               openCategory === index ? "visible" : "hidden",
-                            left: "-30px",
-                            top: "100%",
+                              // left: "-30px",
+                              // top: "100%",
+                            // left: "-50%",
+                            // top: "103%",
                           }}
                           onMouseEnter={() => handleMouseEnter(index)}
                           onMouseLeave={handleMouseLeave}
@@ -397,6 +414,7 @@ export const BottamHeader = () => {
                                           ? "text-color fw-bolder"
                                           : "black fw-normal"
                                       }`}
+                                      style={{fontSize : "15px"}}
                                       onClick={() =>
                                         navigate(
                                           `${
@@ -430,8 +448,8 @@ export const BottamHeader = () => {
                                     </a>
                                     {subcategory.subcategoriesdata && (
                                       <ul
-                                        className="nested-subcategories p-0 px-3 d-flex flex-column"
-                                        style={{ textDecoration: "none" }}
+                                        className="nested-subcategories d-flex flex-column"
+                                        style={{ textDecoration: "none"}}
                                       >
                                         {subcategory.subcategoriesdata
                                           .slice(0, 10)
@@ -442,7 +460,8 @@ export const BottamHeader = () => {
                                               style={{ textDecoration: "none" }}
                                             >
                                               <a
-                                                className="px-0 dropdown-item sub-item  fs-12 fw-semibold "
+                                                className="px-0 dropdown-item sub-item fw-semibold "
+                                                style={{fontSize : "12px"}}
                                                 onClick={() =>
                                                   navigate(
                                                     `${
@@ -477,6 +496,7 @@ export const BottamHeader = () => {
                                           <li className="list-style-none">
                                             <a
                                               className="dropdown-item sub-item category-links px-2 text-color fw-bolder"
+                                              style={{fontSize : "15px"}}
                                               onClick={() =>
                                                 navigate(
                                                   `${
