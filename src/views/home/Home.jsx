@@ -190,8 +190,11 @@ export const Homepage = () => {
             />
             <meta
               name="keywords"
+              // content={
+              //   seoData[0]?.site_meta_keyword ||
+              //   "Leading Saree Manufacturer In Surat."
+              // }
               content={
-                seoData[0]?.site_meta_keyword ||
                 "Leading Saree Manufacturer In Surat."
               }
             />

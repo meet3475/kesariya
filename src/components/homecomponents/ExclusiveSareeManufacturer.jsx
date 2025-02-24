@@ -24,18 +24,27 @@ const ExclusiveSareeManufacturer = () => {
               className="border-image"
             />
           </div>
-          <h4 className="fs-6 fw-semibold  them-font">
-            Kesaria Textile Company is the Best Saree Manufacturer in{" "}
+          {/* <h4 className="fs-6 fw-semibold them-font"> //  <h4 className="fs-6 them-font"> */}
+          <h4 className="fs-6 fw-semibold them-font">
+            {/* Kesaria Textile Company is the Best Saree Manufacturer in{" "}
             {storageData?.locationReplace}. The objective is to offer sarees
             that your customers will love, to provide clothes that express your
             unique style, and to give you as a saree shop owner an opportunity
             to increase revenue by growing your sales every year. This goal has
             earned us credibility not only in
             {storageData?.locationReplace} but has also made us the best saree
-            company in India.
+            company in India. */}
+
+            Looking for a reliable saree manufacturer in {" "}
+            {storageData?.locationReplace}? Kesaria Textile Company 
+            provides stunning sarees that your customers will adore. 
+            We offer a wide variety of styles and designs, helping 
+            you increase revenue and establish your saree shop as a 
+            go-to destination. As a premier saree company in India, 
+            we are dedicated to your success.
           </h4>
           <h4 className="fs-6 fw-semibold them-font">
-            When we talk about the clothing worn by Indian women, sarees are
+            {/* When we talk about the clothing worn by Indian women, sarees are
             among the items they wear most often. These days, designer sarees
             are very popular among women who want to look good and be
             comfortable at the same time. Retailers who buy wholesale designer
@@ -45,10 +54,25 @@ const ExclusiveSareeManufacturer = () => {
             goes well, from quality to pricing to customer satisfaction. This
             allows us to offer products at lower prices than any other saree
             wholesaler in {storageData?.locationReplace} and export products
-            throughout India.
+            throughout India. */}
+
+            When we talk about the clothing worn by Indian women, 
+            sarees are among the items they wear most often. 
+            These days, designer sarees are very popular among 
+            women who want to look good and be comfortable at 
+            the same time. Retailers who buy wholesale designer 
+            sarees from the saree manufacturer in {" "}
+            {storageData?.locationReplace}{" "} are always 
+            concerned about price. As a leading saree manufacturer 
+            in {storageData?.locationReplace}, India, we ensure 
+            that everything goes well, from quality to pricing 
+            to customer satisfaction. This allows us to offer 
+            products at lower prices than any other saree 
+            wholesaler in {storageData?.locationReplace}{" "} 
+            and export products throughout India.
           </h4>
           <h4 className="fs-6 fw-semibold them-font">
-            Providing high-quality products to our customers has earned us the
+            {/* Providing high-quality products to our customers has earned us the
             title of "Best Sarees Manufacturer in {storageData?.locationReplace}
             , India and Also Best Saree Supplier in{" "}
             {storageData?.locationReplace}" We are confident that if you are
@@ -57,17 +81,24 @@ const ExclusiveSareeManufacturer = () => {
             your needs. This is a great opportunity for all Saree manufacturers
             & wholesalers in {storageData?.locationReplace} to bring style with
             comfort to your stores. When it comes to diversity, you can count on
-            us to supply the newest and most in-demand styles.
+            us to supply the newest and most in-demand styles. */}
+
+            As a reputed saree manufacturer in {storageData?.locationReplace}, 
+            we also maintain our inventory wisely. We have stocked trendy 
+            Indian clothing products thoroughly so that retailers or 
+            wholesalers who need them in bulk can get them anywhere in a short time.
+
           </h4>
-          <h4 className="fs-6 fw-semibold them-font">
+          {/* <h4 className="fs-6 fw-semibold them-font">
             As a reputed textile company in {storageData?.locationReplace}, we
             also maintain our inventory wisely. We have stocked trendy Indian
             clothing products thoroughly so that retailers or wholesalers who
             need them in bulk can get them anywhere in a short time.
-          </h4>
+          </h4> */}
         </Container>
       </div>
     </>
   );
 };
 export default ExclusiveSareeManufacturer;
+

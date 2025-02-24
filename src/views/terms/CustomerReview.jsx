@@ -79,8 +79,11 @@ export const CustmerReview = () => {
             />
             <meta
               name="keywords"
+              // content={
+              //   seoData?.meta_keyword || "Leading Saree Manufacturer In Surat."
+              // }
               content={
-                seoData?.meta_keyword || "Leading Saree Manufacturer In Surat."
+                "Leading Saree Manufacturer In Surat."
               }
             />
             <meta property="og:locale" content="en_US" />

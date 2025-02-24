@@ -105,8 +105,11 @@ export const Enquiry = () => {
               />
               <meta
                 name="keywords"
+                // content={
+                //   seoData?.meta_keyword ||
+                //   "Leading Saree Manufacturer In Surat."
+                // }
                 content={
-                  seoData?.meta_keyword ||
                   "Leading Saree Manufacturer In Surat."
                 }
               />
